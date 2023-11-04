@@ -15,7 +15,7 @@ public class W01FizzBuzz {
             if (ok==0) System.out.print(i);
             System.out.print('\n');
         }
-        
+
     }
 
     public static void main(String[] args){
