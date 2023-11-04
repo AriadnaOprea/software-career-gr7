@@ -1,17 +1,21 @@
 package org.example;
 
 public class VersionControl {
-
-    public boolean isBadVersion(int n, int x){
-        return n==x;
+    public class Version{
+        public static int x=1;
     }
-    public int firstBadVersion(int  n, int x){
+
+    public static boolean isBadVersion(int n){
+        if (n>=Version.x) return true;
+        return false;
+    }
+    public static int firstBadVersion(int  n){
         int left = 1;
         int right = n;
 
         while (left < right) {
             int mid = left + (right - left)/ 2;
-            if (isBadVersion(mid,x)) {
+            if (isBadVersion(mid)) {
                 right = mid;
             } else {
                 left = mid + 1;
@@ -20,5 +24,9 @@ public class VersionControl {
 
         return left;
     }
-
+    public static void main(String[] args){
+        //int x=1;
+        int isbad=firstBadVersion(15);
+        System.out.println(isbad);;
+    }
 }
