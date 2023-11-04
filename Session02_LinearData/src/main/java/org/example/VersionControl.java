@@ -2,7 +2,7 @@ package org.example;
 
 public class VersionControl {
     public class Version{
-        public static int x=1;
+        public static int x;
     }
 
     public static boolean isBadVersion(int n){
@@ -25,8 +25,8 @@ public class VersionControl {
         return left;
     }
     public static void main(String[] args){
-        //int x=1;
-        int isbad=firstBadVersion(15);
+        Version.x=4;
+        int isbad=firstBadVersion(5);
         System.out.println(isbad);;
     }
 }
